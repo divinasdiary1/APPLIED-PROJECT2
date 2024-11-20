@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <title>Music Recommendation System</title>
+</head>
+<body>
+    <h1>Music Recommendation System</h1>
+    <h3>Welcome to Music Maestro &#127932;</h3>
+    <img src="MusicMaestro.gif" alt="creative music app logo"> 
+    <p>Discover new artists and genres of music or simply begin searching your favorite song via the search bar.&#128269;</p> 
+
+    <div id="auth">
+        <button id="loginBtn">Log In</button>
+        <button id="createAccountBtn">Create Account</button>
+        <button id="guestBtn">Continue as Guest</button>
+    </div>
+
+    <div id="quiz" class="hidden">
+        <h3>Take a Quiz</h3>    
+        <button id="startQuizButton" type="button">Start Quiz</button>
+    </div>
+
+    <div id="search" class="hidden">
+        <button id="goToSearchButton" type="button">Take me to the search bar</button>
+    </div>
+
+    <div id="loginForm" class="hidden">
+        <h3>Login</h3>
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button id="submitLogin">Submit</button>
+    </div>
+
+    <div id="createAccountForm" class="hidden">
+        <h3>Create Account</h3>
+        <input type="email" id="createEmail" placeholder="Email">
+        <input type="password" id="createPassword" placeholder="Password">
+        <button id="submitCreateAccount">Submit</button>
+    </div>
+
+    <!-- Search Function (Jaskomal) ----------------------------------------- -->
+    <div id="searchForm" class="hidden">
+        <input type="text" id="query" placeholder="Enter your search query">
+        <button id="searchButton" onclick="searchCSV()">Search</button>
+    </div>
+    
+     <!-- Results will be displayed as a grid here -->
+    <div id="results" class="hidden"> 
+    </div>
+    
+    <!-- Search Function (Jaskomal) end ------------------------------------------->
+
+    <div id="quizForm" class="hidden">
+        <h3>Take Quiz</h3>
+        <label for="favoriteArtist">Favorite Artist:</label>
+        <input type="text" id="favoriteArtist" placeholder="Favorite Artist"><br>
+
+        <label for="favoriteGenre">Favorite Genre:</label>
+        <input type="text" id="favoriteGenre" placeholder="Favorite Genre"><br>
+
+        <label for="lastArtist">Last Artist You Listened To:</label>
+        <input type="text" id="lastArtist" placeholder="Last Artist"><br>
+
+        <button id="submitQuiz">Submit Quiz</button>
+    </div>
+    <!-- Recommendations Section (Hidden by default)- Jaspinder -->
+    <div id="recommendations" class="hidden">
+        <h3>Enjoy the recommendations below</h3>
+        <ul id="songList"></ul>
+    </div>
+ 
+ <!-- Recommended songs will be displayed here- Jaspinder -->
+
+  <!-- Error message for no results found -->
+    <div id="noResults" class="hidden">
+        <p>No recommendations found based on your input.</p>
+    </div>
+
+    <script src="main.js"></script>
+    <script type="module">
+        // Import Firebase functionalities
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDPpkncRU9e32CsXmZFWgFLGY4RfnYjj7o",
+            authDomain: "musicrecommendationsyste-59a49.firebaseapp.com",
+            projectId: "musicrecommendationsyste-59a49",
+            storageBucket: "musicrecommendationsyste-59a49.firebasestorage.app",
+            messagingSenderId: "361167705666",
+            appId: "1:361167705666:web:6f04fd86a1d5f2bc7dffdb",
+            measurementId: "G-WEDY7H8GQ5"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+ 
+</body>
+</html>
+<!-- 
+    
+    

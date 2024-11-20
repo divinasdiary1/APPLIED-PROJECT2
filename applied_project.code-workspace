@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/applied_project/node_modules"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "applied_project"
+	}
+}
