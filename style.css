@@ -1,0 +1,140 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #f5f5dc; /* Soft beige background */
+    margin: 24px;
+    text-align: center;
+    color: #333; /* Dark text for better readability */
+}
+
+.__quiz, .__search, #loginForm, #createAccountForm, #recommendations {
+    display: inline-block;
+    padding: 24px 32px;
+    border-radius: 15px; /* Slightly rounded corners */
+    background: #fff; /* White background for forms */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px 0; /* Spacing between sections */
+}
+
+img {
+    width: 350px;
+    height: 350px;
+    border-radius: 15px; /* Rounded image corners */
+}
+
+.hidden {
+    display: none !important; /* Ensure hidden elements are not displayed */
+}
+
+#auth button, #loginForm button, #createAccountForm button, #searchButton, #startQuizButton, #goToSearchButton, #submitQuiz {
+    padding: 10px 20px;
+    margin: 5px; /* Added missing semicolon */
+    border: none;
+    border-radius: 5px; /* Consistent button rounding */
+    cursor: pointer;
+    background-color: #5cb85c; /* Green button */
+    color: white; /* White text */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+#auth button:hover, #loginForm button:hover, #createAccountForm button:hover, #searchButton:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+#search {
+    margin-top: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px; /* Set a width for the input */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    transition: border-color 0.3s; /* Smooth border transition */
+}
+
+#searchInput:focus {
+    border-color: #5cb85c; /* Green border on focus */
+    outline: none; /* Remove default outline */
+}
+
+h1 {
+    color: #5cb85c; /* Main theme color for the title */
+}
+
+h3 {
+    color: #333; /* Dark text for headings */
+}
+
+#recommendations {
+    margin-top: 20px;
+}
+
+#songList {
+    list-style-type: none; /* Remove bullet points from list */
+    padding: 0; /* Remove default padding */
+}
+
+#songList li {
+    background: #e7f7e7; /* Light green background for song items */
+    margin: 5px 0; /* Spacing between items */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+#songList li:hover {
+    background: #d4edda; /* Slightly darker green on hover */
+}
+
+/* Jaspinder */
+/* Styling for recommendations */
+.song {
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Style for error message */
+#noResults {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Style for loading spinner */
+#loading {
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* Jaspinder -end- */
+
+/* Search results show in a grid (Jaskomal) */
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .result-card {
+    border: 1px solid #4cae4c;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5d0;
+  }
+
+  .result-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .result-card p {
+    margin: 0.3rem 0;
+    text-align: left;
+    color: #333;
+  }
+  /* Search results show in a grid (Jaskomal) -end- */
